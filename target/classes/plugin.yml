@@ -1,8 +1,0 @@
-name: XenNotice
-main: net.loadingchunks.plugins.XenNotice.XenNotice
-version: 0.2
-
-commands:
-   xn:
-      description: Control XenNotice
-      usage: /<command> <sub-command>
