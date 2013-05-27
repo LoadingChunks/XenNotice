@@ -17,8 +17,11 @@ package net.loadingchunks.plugins.XenNotice;
     along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import java.awt.Color;
+
 import net.loadingchunks.plugins.XenNotice.util.Formatter;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -39,14 +42,19 @@ public class XenNoticeCommandExecutor implements CommandExecutor {
         		return false;
         	if(args[0].equalsIgnoreCase("reload") && sender.hasPermission("xen.reload")) {
         		plugin.reloadConfig();
+        		sender.sendMessage(ChatColor.GREEN + "Reloaded Config!");
         	} else if(args[0].equalsIgnoreCase("list") && sender.hasPermission("xen.list")) {
+        		sender.sendMessage(ChatColor.GREEN + "Active Notices: ");
         		for(String s : plugin.noticeList) {
         			sender.sendMessage("- " + Formatter.formatNotice(s));
         		}
+        		return true;
         	} else if(args[0].equalsIgnoreCase("rawlist") && sender.hasPermission("xen.list")) {
+        		sender.sendMessage(ChatColor.GREEN + "Active Notices (RAW): ");
         		for(String s : plugin.noticeList) {
         			sender.sendMessage("- " + s);
         		}
+        		return true;
         	}
         }
         return false;
