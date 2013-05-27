@@ -48,6 +48,8 @@ public class XenNotice extends JavaPlugin {
 	public void onEnable() { 
 
 		PluginManager pm = this.getServer().getPluginManager();
+		
+		SQLWrapper.setPlugin(this);
 
 		getCommand("xn").setExecutor(commandExecutor);
 		
