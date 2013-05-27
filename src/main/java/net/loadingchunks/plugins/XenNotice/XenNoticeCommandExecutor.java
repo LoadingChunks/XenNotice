@@ -43,6 +43,7 @@ public class XenNoticeCommandExecutor implements CommandExecutor {
         	if(args[0].equalsIgnoreCase("reload") && sender.hasPermission("xen.reload")) {
         		plugin.reloadConfig();
         		sender.sendMessage(ChatColor.GREEN + "Reloaded Config!");
+        		return true;
         	} else if(args[0].equalsIgnoreCase("list") && sender.hasPermission("xen.list")) {
         		sender.sendMessage(ChatColor.GREEN + "Active Notices: ");
         		for(String s : plugin.noticeList) {
