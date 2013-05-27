@@ -5,4 +5,4 @@ version: 1.0
 commands:
    xn:
       description: Control XenNotice
-      usage: /<command> <sub-command>
+      usage: /<command> <reload|list|rawlist>
