@@ -4,7 +4,7 @@
 	<groupId>net.loadingchunks.plugins</groupId>
 	<artifactId>XenNotice</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>XenNotice</name>
 	<url>http://maven.apache.org</url>
 	<properties>

@@ -67,7 +67,7 @@ public class SQLWrapper {
 
 	public static void populateNotices(ArrayList<String> noticeList) {
 		try {
-			PreparedStatement stat = con.prepareStatement("SELECT title FROM xf_thread WHERE node_id = ? AND prefix_id != ? ORDER BY post_date ASC");
+			PreparedStatement stat = con.prepareStatement("SELECT title FROM xf_thread WHERE discussion_open = 1 AND node_id = ? AND prefix_id != ? ORDER BY post_date ASC");
 			stat.setInt(1, plugin.getConfig().getInt("xen.node"));
 			stat.setInt(2, plugin.getConfig().getInt("xen.ignore_prefix"));
 			stat.execute();
