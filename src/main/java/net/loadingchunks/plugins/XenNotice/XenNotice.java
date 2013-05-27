@@ -67,7 +67,7 @@ public class XenNotice extends JavaPlugin {
 		Formatter.setPlugin(this);
 		
 		saveDefaultConfig();
-		dbConnect();
+		reloadConfig();
 		setupTasks();
 	}
 	
