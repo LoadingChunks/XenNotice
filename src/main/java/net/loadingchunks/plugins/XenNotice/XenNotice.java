@@ -84,6 +84,6 @@ public class XenNotice extends JavaPlugin {
 	}
 	
 	public void setupTasks() {
-		schedulerTasks.add(new NoticeTask(this).runTaskTimer(this, getConfig().getLong("timers.repeat") * 20L, getConfig().getLong("timers.start") * 20L));
+		schedulerTasks.add(new NoticeTask(this).runTaskTimer(this, getConfig().getLong("timers.start") * 20L, getConfig().getLong("timers.repeat") * 20L));
 	}
 }
