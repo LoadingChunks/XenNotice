@@ -73,8 +73,12 @@ public class XenNotice extends JavaPlugin {
 	
 	@Override
 	public void reloadConfig() {
+		for(BukkitTask t : schedulerTasks) {
+			t.cancel();
+		}
 		super.reloadConfig();
 		dbConnect();
+		setupTasks();
 	}
 	
 	public void dbConnect() {
