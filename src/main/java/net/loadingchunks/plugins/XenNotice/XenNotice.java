@@ -68,7 +68,6 @@ public class XenNotice extends JavaPlugin {
 		
 		saveDefaultConfig();
 		reloadConfig();
-		setupTasks();
 	}
 	
 	@Override
